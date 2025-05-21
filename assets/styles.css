@@ -136,7 +136,7 @@
   }
   
   .principal{
-    background: url('/img/principal.jpg') center/cover no-repeat;
+    background: url('../img/principal.jpg') center/cover no-repeat;
     color: #fff;
     text-align: center;
     padding: 6rem 2rem;
