@@ -1,0 +1,403 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  header {
+    background-color: #3195FB;
+    color: #fff;
+    padding: 1rem 0;
+  }
+
+  .headerNext{
+    display:flex;
+    justify-content: space-between;
+  }
+
+  .navNext a{
+    font-size: 0.8rem;
+    margin-right:1rem;
+  }
+
+  .navNext a:hover{
+    color:#002b5b;
+  }
+
+  .hover-underline {
+    font-size: 2rem;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #002b5b, #1a589f);
+    bottom: -2px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+  }
+  
+  
+  .hover-underline:hover::after {
+    transform: scaleX(1);
+  }
+  
+
+  .logoHeader {
+    width: 6rem;
+    margin-left:1rem;
+    }  
+
+  .navBandera{
+    display: flex;
+  }
+
+  .idioma{
+    margin-right:10px;
+    width:30px;
+    }
+
+
+    .menuToggle {
+        display: none;
+        font-size: 1.5rem;
+        margin-right:1rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      
+      /* Estilo responsive */
+      @media (max-width: 768px) {
+        .menuToggle {
+          display: block;
+        }
+      
+        .navNext {
+          display: none;
+          flex-direction: column;
+          width:100vw;
+          position: absolute;
+          top: 60px;
+          background-color: #3195FB;
+          padding: 16px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          z-index: 1000;
+        }
+      
+        .navNext.open {
+          display: flex;
+        }
+
+        .navNext a{
+            font-family: "Nunito Sans", sans-serif;;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            margin-bottom:0.5em;
+        }
+      }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .principal{
+    background: url('/img/principal.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 6rem 2rem;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .principal h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    width:70vw;
+    text-align:center;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .botonPrincipal {
+    margin-top:5rem;
+    background-color: #3195FB;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: bold;
+  }
+
+  .botonPrincipal:hover {
+    background-color: #002b5b;
+    color: #3195FB;
+  }
+  
+  .servicios{
+    background-color:#f7f7f7;
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .serviciosTitulo{
+    font-weight: 900;
+    margin-top:3rem;
+    margin-bottom:2rem;
+    font-size:2rem;
+    color:#3195FB;
+  }
+
+  .cardHolder{
+    width:90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+  }
+  
+  .card {
+    display: flex;
+    flex-direction:column;
+    max-width: 30vw;
+    min-width: 30vw;
+    margin:1rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: 1px solid #f0f0f1;
+    border-radius: 8px;
+    align-items: center;
+  }
+
+  .cardTitulo{
+    color: #3195FB;
+    font-weight: 800;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    text-align: center;
+  }
+
+  .cardImg{
+    width:5vw;
+  }
+
+  .cardFlecha{
+    width:2vw;
+    transition: transform 0.4s ease;
+  }
+  
+  .cardFlecha:hover {
+    transform: rotate(180deg);
+  }
+
+  .cardContenido {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .cardContenido p{
+    margin-bottom:0.5rem;
+  }
+
+  .card.open .cardFlecha {
+    transform: rotate(180deg);
+  }
+
+  .sectionEmpresas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+  }
+
+  .empresasTitulo{
+    color: #3195FB;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top:1.5rem;
+    margin-bottom:0.2rem;
+    text-align: center;
+  }
+
+  .empresasSubtitulo{
+    color: #3195FB;
+    font-size: 1rem;
+    margin-bottom:1rem;
+    text-align: center;
+  }
+  
+  .logoEmpresas{
+    display:flex;
+    flex-direction: row;
+    margin-top: 3rem;
+  }
+
+  .empresas{
+    height:7vw;
+    padding:1rem;
+  }
+
+  .nosotros{
+    background-color:#f7f7f7;
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nosotrosTitulo{
+    color: #3195FB;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top:2rem;
+    margin-bottom:1rem;
+    text-align: center;
+  }
+
+  .nosotrosDiv{
+    display: flex;
+    margin-left:10vw;
+    margin-right:10vw;
+    margin-top:5vh;
+  }
+
+  .nosotrosTexto{
+    font-size:1rem;
+    padding-right:2rem;
+    text-align: justify;
+}
+
+  .imgNosotros{
+    width: 30vw;
+  }
+
+  .contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:3rem;
+  }
+
+  .contactoTitulo{
+    color: #3195FB;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top:2rem;
+    margin-bottom:1rem;
+    text-align: center;
+  }
+
+
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width:70vw;
+  }
+
+  .datosDiv{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom:2rem;
+  }
+
+  .datosInt{
+    display: flex;
+    margin-left:2rem;
+    margin-right:2rem;
+  }
+
+  .logoContacto{
+    margin-left:0.5rem;
+    margin-right:0.5rem;
+  }
+  
+  form input,
+  form textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #3195FB;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: #3195FB;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color: #3195FB;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .stickyWhats{
+    width:5vw;
+    z-index: 1000000;
+    position:fixed;
+    bottom:30px;
+    right:15px;
+  }
+  
+  .botonEnviar:hover{
+        background-color: #002b5b;
+        color: #3195FB;
+        font-weight: bolder;
+  }
+
+  .datosInt:hover{
+    color:#3195FB;
+  }
