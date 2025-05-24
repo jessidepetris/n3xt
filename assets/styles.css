@@ -195,7 +195,7 @@
   }
 
   .cardImg{
-    width:5vw;
+    width:20%;
   }
 
   .cardFlecha{
@@ -484,9 +484,9 @@
 
       }
 
-
-
-
+    .cardFlecha{
+        width:4vw;
+    }
 
   }
   
