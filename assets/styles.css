@@ -27,6 +27,8 @@
   .headerNext{
     display:flex;
     justify-content: space-between;
+    max-width: 100vw;
+    align-items: center;
   }
 
   .navNext a{
@@ -76,6 +78,7 @@
   .idioma{
     margin-right:10px;
     width:30px;
+    height: 30px;
     }
 
 
@@ -88,36 +91,7 @@
         cursor: pointer;
       }
       
-      /* Estilo responsive */
-      @media (max-width: 768px) {
-        .menuToggle {
-          display: block;
-        }
       
-        .navNext {
-          display: none;
-          flex-direction: column;
-          width:100vw;
-          position: absolute;
-          top: 60px;
-          background-color: #3195FB;
-          padding: 16px;
-          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-          z-index: 1000;
-        }
-      
-        .navNext.open {
-          display: flex;
-        }
-
-        .navNext a{
-            font-family: "Nunito Sans", sans-serif;;
-            text-align: center;
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-            margin-bottom:0.5em;
-        }
-      }
   
   header h1 {
     font-size: 1.8rem;
@@ -136,7 +110,7 @@
   }
   
   .principal{
-    background: url('../img/principal.jpg') center/cover no-repeat;
+    background: url('/img/principal.jpg') center/cover no-repeat;
     color: #fff;
     text-align: center;
     padding: 6rem 2rem;
@@ -289,6 +263,7 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
   }
 
   .nosotrosTitulo{
@@ -386,10 +361,15 @@
 
   .stickyWhats{
     width:5vw;
-    z-index: 1000000;
+    z-index: 1000;
     position:fixed;
     bottom:30px;
     right:15px;
+  }
+
+  .sticky{
+    z-index: 9999;
+
   }
   
   .botonEnviar:hover{
@@ -400,4 +380,118 @@
 
   .datosInt:hover{
     color:#3195FB;
+  }
+
+  /* Estilo responsive */
+  @media (max-width: 768px) {
+    .menuToggle {
+      display: block;
+    }
+  
+    .navNext {
+      display: none;
+      flex-direction: column;
+      width:100vw;
+      min-height:70vh;
+      position: absolute;
+      top: 60px;
+      left:0px;
+      background-color: #3195FB;
+      padding: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+  
+    .navNext.open {
+      display: flex;
+    }
+
+    .navNext a{
+        font-family: "Nunito Sans", sans-serif;;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        margin-bottom:0.5em;
+        margin-right:0;
+    }
+    .botonPrincipal {
+        margin-top:2rem;
+    }
+
+    .empresas {
+        height: 9vw;
+    }
+
+    .imgNosotros{
+        height:100%;
+    }
+
+  }
+
+  @media (max-width: 750px) {
+    .cardHolder {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .logoEmpresas{
+        flex-direction: column;
+        margin-top:5vw;
+        margin-bottom:5vw;
+    }
+
+    .empresas{
+        height: 15vw;
+
+    }
+
+    .sectionEmpresas{
+        min-height: 60vh;
+    }
+
+    .datosDiv{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nosotros{
+        max-width:100vw;
+
+    }
+
+    .nosotrosDiv{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .imgNosotros{
+        width: 70vw;
+        margin-bottom:5vw;
+    }
+
+    .nosotrosTexto{
+        padding:0;
+        margin-bottom:5vw;
+    }
+
+    .card {
+        max-width: 60vw;
+        min-width: 60vw;
+      }
+
+    .stickyWhats{
+        width:40px;
+
+      }
+
+
+
+
+
+  }
+  
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
   }
