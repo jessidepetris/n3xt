@@ -6,7 +6,7 @@
   }
   
   body {
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Manrope", sans-serif;
     line-height: 1.6;
     color: #333;
   }
@@ -128,7 +128,7 @@
     text-align:center;
   }
   
-  .hero p {
+  .pPrincipal {
     font-size: 1.2rem;
     margin-bottom: 2rem;
   }
@@ -141,6 +141,7 @@
     text-decoration: none;
     border-radius: 15px;
     font-weight: bold;
+    font-size:1.3rem;
   }
 
   .botonPrincipal:hover {
@@ -176,6 +177,7 @@
   .card {
     display: flex;
     flex-direction:column;
+    min-height:40vh;
     max-width: 30vw;
     min-width: 30vw;
     margin:1rem;
@@ -224,10 +226,12 @@
   }
 
   .sectionEmpresas{
+    background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 60vh;
   }
 
   .empresasTitulo{
@@ -245,20 +249,32 @@
     margin-bottom:1rem;
     text-align: center;
   }
-  
-  .logoEmpresas{
-    display:flex;
-    flex-direction: row;
-    margin-top: 3rem;
+
+  .logoEmpresas {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3rem;
+  width: 60%;
   }
 
-  .empresas{
-    height:7vw;
-    padding:1rem;
+  .logoEmpresas .slick-slide {
+  display: flex !important; /* Necesario para que Slick no oculte las imágenes */
+  justify-content: center;
+  align-items: center;
   }
+
+  .empresas {
+  width: auto;
+  max-height: 70px; /* Ajusta según tu diseño */
+  object-fit: contain;
+  }
+  .slick-prev::before,
+.slick-next::before {
+  color: #6e96c0 !important; /* Azul */
+}
 
   .nosotros{
-    background-color:#f7f7f7;
+    background-color:#ffffff;
     min-height:100vh;
     display:flex;
     flex-direction: column;
@@ -279,11 +295,12 @@
     display: flex;
     margin-left:10vw;
     margin-right:10vw;
-    margin-top:5vh;
+    margin-top:10vh;
   }
 
   .nosotrosTexto{
-    font-size:1rem;
+    font-size:1.2rem;
+    line-height:2.5;
     padding-right:2rem;
     text-align: justify;
 }
@@ -382,6 +399,25 @@
     color:#3195FB;
   }
 
+
+    /* Estilo responsive */
+  @media (max-width: 1240px) {
+        .nosotrosDiv{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+        .imgNosotros{
+        width: 70vw;
+        margin-bottom:5vw;
+    }
+
+    .nosotrosTexto{
+        padding:0;
+        margin-bottom:5vw;
+    }
+    
+  }
   /* Estilo responsive */
   @media (max-width: 768px) {
     .menuToggle {
@@ -434,17 +470,6 @@
         align-content: center;
     }
 
-    .logoEmpresas{
-        flex-direction: column;
-        margin-top:5vw;
-        margin-bottom:5vw;
-    }
-
-    .empresas{
-        height: 15vw;
-
-    }
-
     .sectionEmpresas{
         min-height: 60vh;
     }
@@ -477,6 +502,7 @@
     .card {
         max-width: 60vw;
         min-width: 60vw;
+        min-height:20vh;
       }
 
     .stickyWhats{
