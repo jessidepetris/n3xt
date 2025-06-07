@@ -303,7 +303,7 @@
 }
 
   .nosotros{
-    background-image:url("/img/fondobusiness.jpg");
+    background-image:url("../img/fondobusiness.jpg");
     background-size: cover;
     background-attachment: fixed, scroll;
     min-height:100vh;
