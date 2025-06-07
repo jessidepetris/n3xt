@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -30,95 +31,98 @@
     <!-- Header -->
     <header class="headerNext">
         <img class="logoHeader" src="img/logo.svg" alt="">
-        <button class="menuToggle" id="menuToggle"> ☰ </button>
+        <div class="arregloheader">
+                  <button class="menuToggle" id="menuToggle"> ☰ </button>
         <div class="navBandera">
             <nav id="menu" class="navNext">
-                <a class="hover-underline" href="#servicios">SERVICIOS</a>
-                <a class="hover-underline" href="#nosotros">NOSOTROS</a>
-                <a class="hover-underline" href="#contacto">CONTACTO</a>
+                <a class="hover-underline" data-i18n="servicios" href="#servicios">SERVICIOS</a>
+                <a class="hover-underline" data-i18n="nosotros" href="#nosotros">NOSOTROS</a>
+                <a class="hover-underline" data-i18n="contacto" href="#contacto">CONTACTO</a>
               </nav>
-              <img src="img/icons8-circular-de-ee-uu-96.png" class="idioma" alt="">
         </div>
+        <p class="nav-idiom" onclick="toggleLanguage()">EN</p>
+        </div>
+
     </header>
 
     <!-- Principal -->
 <section class="principal">
-  <h2 class="h2Principal" data-aos="fade-up"data-aos-duration="1000">IMPULSAMOS TUS FINANZAS PARA ACOMPAÑAR TU CRECIMIENTO</h2>
-  <p class="pPrincipal" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000">Sabés a dónde querés llegar. Nosotros te ayudamos a lograrlo.</p>
-  <a href="#contacto" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1000" class="botonPrincipal">AGENDÁ TU ASESORÍA</a>
+  <h2 class="h2Principal" data-aos="fade-up"data-aos-duration="1000" data-i18n="h2Principal">IMPULSAMOS <span class="h2soft">TUS FINANZAS PARA ACOMPAÑAR TU</span> CRECIMIENTO</h2>
+  <p class="pPrincipal" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000" data-i18n="pPrincipal">SABÉS A DONDE QUERÉS LLEGAR. NOSOTROS TE AYUDAMOS A LOGRARLO.</p>
+  <a href="#contacto" data-aos="zoom-in" data-aos-duration="1000" class="botonPrincipal" data-i18n="botonPrincipal">AGENDÁ TU ASESORÍA</a>
 </section>
 
     <!-- Servicios -->
     <section id="servicios" class="servicios">
-        <h3 class="serviciosTitulo" data-aos="fade-down">NUESTROS SERVICIOS</h3>
+        <h3 class="serviciosTitulo" data-i18n="nuestrosServicios" data-aos="fade-down">NUESTROS SERVICIOS</h3>
         <div class="cardHolder">
 
           <div class="card" data-aos="fade-right" data-aos-duration="1000">
             <img src="img/brujula.svg" class="cardImg" />
-            <h4 class="cardTitulo">DIAGNÓSTICO Y EVALUACIÓN FINANCIERA</h4>
+            <h4 class="cardTitulo" data-i18n="diagnosticoEvaluacion">DIAGNÓSTICO Y EVALUACIÓN FINANCIERA</h4>
             <img class="cardFlecha" src="img/flecha.svg" alt="">
             <div class="cardContenido">
-                <p>• Análisis de estados financieros (solvencia, rentabilidad y liquidez).</p>
-                <p>• Evaluación de proyectos de inversión (TIR, VAN, Payback, análisis de escenarios).</p>
-                <p>• Valuación de empresas (DCF).</p>
-                <p>• Scoring crediticio de clientes y proveedores.</p>
+                <p data-i18n="dep1">• Análisis de estados financieros (solvencia, rentabilidad y liquidez).</p>
+                <p data-i18n="dep2">• Evaluación de proyectos de inversión (TIR, VAN, Payback, análisis de escenarios).</p>
+                <p data-i18n="dep3">• Valuación de empresas (DCF).</p>
+                <p data-i18n="dep4">• Scoring crediticio de clientes y proveedores.</p>
             </div>
           </div>
 
           <div class="card" data-aos="fade-left" data-aos-duration="1000">
             <img src="img/plan.svg" class="cardImg" />
-            <h4 class="cardTitulo">PLANEAMIENTO FINANCIERO Y CONTROL DE GESTIÓN</h4>
+            <h4 class="cardTitulo" data-i18n="planeamiento">PLANEAMIENTO FINANCIERO Y CONTROL DE GESTIÓN</h4>
             <img class="cardFlecha" src="img/flecha.svg" alt="">
             <div class="cardContenido">
-                <p>• Presupuesto económico y control de gestión.</p>
-                <p>• Cash flow histórico y proyectado.</p>
-                <p>• Desarrollo de métricas del negocio (KPI’s).</p>
-                <p>• Automatización de reportes de caja, inversiones y cash flow.</p>
+                <p data-i18n="pla1">• Presupuesto económico y control de gestión.</p>
+                <p data-i18n="pla2">• Cash flow histórico y proyectado.</p>
+                <p data-i18n="pla3">• Desarrollo de métricas del negocio (KPI’s).</p>
+                <p data-i18n="pla4">• Automatización de reportes de caja, inversiones y cash flow.</p>
             </div>
         </div>
 
           <div class="card" data-aos="fade-right" data-aos-duration="1000">
             <img src="img/optimizar.svg" class="cardImg" />
-            <h4 class="cardTitulo">OPTIMIZACIÓN DE RECURSOS FINANCIEROS</h4>
+            <h4 class="cardTitulo" data-i18n="optimizacion">OPTIMIZACIÓN DE RECURSOS FINANCIEROS</h4>
             <img class="cardFlecha" src="img/flecha.svg" alt="">
             <div class="cardContenido">
-                <p>• Desarrollo de política de inversión de los excedentes de caja.</p>
-                <p>• Gestión de portafolio de inversiones.</p>
-                <p>• Reporte de rentabilidad del portafolio y asignación por tipo de activo.</p>
+                <p data-i18n="op1">• Desarrollo de política de inversión de los excedentes de caja.</p>
+                <p data-i18n="op2">• Gestión de portafolio de inversiones.</p>
+                <p data-i18n="op3">• Reporte de rentabilidad del portafolio y asignación por tipo de activo.</p>
             </div>
         </div>
 
         <div class="card" data-aos="fade-left" data-aos-duration="1000">
             <img src="img/riesgo.svg" class="cardImg" />
-            <h4 class="cardTitulo">GESTIÓN DE COSTOS Y RIESGOS FINANCIEROS</h4>
+            <h4 class="cardTitulo" data-i18n="gestion">GESTIÓN DE COSTOS Y RIESGOS FINANCIEROS</h4>
             <img class="cardFlecha" src="img/flecha.svg" alt="">
             <div class="cardContenido">
-                <p>• Cobertura de riesgos financieros y operativos.</p>
-                <p>• Documentación y definición de procesos financieros.</p>
-                <p>• Desarrollo de sistemas de costos.</p>
-                <p>• Optimización de capital de trabajo.</p>
+                <p data-i18n="ge1">• Cobertura de riesgos financieros y operativos.</p>
+                <p data-i18n="ge2">• Documentación y definición de procesos financieros.</p>
+                <p data-i18n="ge3">• Desarrollo de sistemas de costos.</p>
+                <p data-i18n="ge4">• Optimización de capital de trabajo.</p>
             </div>
         </div>
 
           <div class="card" data-aos="fade-right" data-aos-duration="1000">
             <img src="img/financiamiento-01.svg" class="cardImg" />
-            <h4 class="cardTitulo">GESTIÓN DE FINANCIAMIENTO</h4>
+            <h4 class="cardTitulo" data-i18n="financing">GESTIÓN DE FINANCIAMIENTO</h4>
             <img class="cardFlecha" src="img/flecha.svg" alt="">
             <div class="cardContenido">
-                <p>• Estructuración de deuda (mercado bancario y de capitales).</p>
-                <p>• Plan de reestructuración de pasivos financieros.</p>
-                <p>• Preparación de decks para aplicación a rondas de inversión.</p>
+                <p data-i18n="fi1">• Estructuración de deuda (mercado bancario y de capitales).</p>
+                <p data-i18n="fi2">• Plan de reestructuración de pasivos financieros.</p>
+                <p data-i18n="fi3">• Preparación de decks para aplicación a rondas de inversión.</p>
             </div>
           </div>
 
           <div class="card" data-aos="fade-left" data-aos-duration="1000">
             <img src="img/dashboard-01.svg" class="cardImg" />
-            <h4 class="cardTitulo">BI, DASHBOARD & OTROS</h4>
+            <h4 class="cardTitulo" data-i18n="bi">BI, DASHBOARD & OTROS</h4>
             <img class="cardFlecha" src="img/flecha.svg" alt="">
             <div class="cardContenido">
-                <p>• Desarrollo de dashboards y reportes automatizados.</p>
-                <p>• Selección y evaluación de perfiles financieros.</p>
-                <p>• Capacitación en temas financieros.</p>
+                <p data-i18n="bi1">• Desarrollo de dashboards y reportes automatizados.</p>
+                <p data-i18n="bi2">• Selección y evaluación de perfiles financieros.</p>
+                <p data-i18n="bi3">• Capacitación en temas financieros.</p>
             </div>
           </div>
 
@@ -127,10 +131,9 @@
 
 <!-- Beneficios -->
 <section id="nosotros" class="nosotros">
-    <h3 class="nosotrosTitulo" data-aos="fade-up" data-aos-duration="1000">NUESTRA EMPRESA</h3>
+    <h3 class="nosotrosTitulo" data-aos="fade-up" data-i18n="nuestraEmpresa" data-aos-duration="1000">NUESTRA EMPRESA</h3>
     <div class="nosotrosDiv">
-        <p class="nosotrosTexto" data-aos="fade-right" data-aos-duration="1500">Somos una consultora fundada en 2024, creada por un equipo con una extensa experiencia en el mercado financiero, corporativo y fintech. Consideramos que la confianza, la confidencialidad y la independencia son claves para ofrecer un asesoramiento integral y transparente. Por eso, trabajamos de forma cercana y personalizada, adaptándonos a las necesidades de cada empresa con soluciones financieras y un equipo de profesionales comprometidos.</p>
-        <img class="imgNosotros" data-aos="fade-left" data-aos-duration="1500" src="img/principal.jpg" alt="">
+        <p class="nosotrosTexto" data-aos="fade-right" data-i18n="nuestraEmpresaText" data-aos-duration="1500">Somos una consultora fundada en 2024, creada por un equipo con una extensa experiencia en el mercado financiero, corporativo y fintech. Consideramos que la confianza, la confidencialidad y la independencia son claves para ofrecer un asesoramiento integral y transparente. Por eso, trabajamos de forma cercana y personalizada, adaptándonos a las necesidades de cada empresa con soluciones financieras y un equipo de profesionales comprometidos.</p>
     </div>
 </section>
 
@@ -138,8 +141,8 @@
 
 
 <section id="testimonios" class="sectionEmpresas">
-    <h3 class="empresasTitulo" data-aos="fade-up" data-aos-duration="1000">ALGUNAS DE LAS EMPRESAS QUE CONFIAN EN NOSOTROS</h3>
-    <!-- <h2 class="empresasSubtitulo"data-aos="fade">Que confían en nosotros.</h2> -->
+    <h3 class="empresasTitulo" data-aos="fade-up" data-aos-duration="1000" data-i18n="empresasConfian">ALGUNAS EMPRESAS</h3>
+    <h2 class="empresasSubtitulo"data-aos="fade" data-i18n="empresasConfian2">Que confían en nosotros.</h2>
     <div class="logoEmpresas" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
       <div><img src="img/giuliano.jpg" class="empresas"/></div>
       <div><img src="img/galvanosur-01.jpg" class="empresas"/></div>
@@ -151,12 +154,12 @@
 
  <!-- Contacto -->
 <section id="contacto" class="contacto" data-aos="fade-up" data-aos-duration="1000">
-    <h3 class="contactoTitulo">CONTACTO</h3>
+    <h3 class="contactoTitulo" data-i18n="contactoTitulo">CONTACTO</h3>
     <form class="formulario">
-      <input type="text" placeholder="Nombre completo" required class="formContacto" />
-      <input type="email" placeholder="Correo electrónico" required class="formContacto" />
-      <textarea placeholder="Mensaje o consulta..." required rows="5" class="formContacto"></textarea>
-      <button type="submit" class="botonEnviar">ENVIAR MENSAJE</button>
+      <input type="text" data-i18n-placeholder="nombreCompleto" required class="formContacto" />
+      <input type="email" data-i18n-placeholder="correoElectronico" required class="formContacto" />
+      <textarea data-i18n-placeholder="mensajeConsulta" required rows="5" class="formContacto"></textarea>
+      <button type="submit" class="botonEnviar" data-i18n="enviarMensaje">ENVIAR MENSAJE</button>
     </form>    
 </section>
 
@@ -179,8 +182,24 @@
 
 <!-- Footer -->
 <footer class="footerN3xt">
-    <p>&copy; N3XT 2025. Todos los derechos reservados.</p>
+    <p data-i18n="copyright">&copy; N3XT 2025. Todos los derechos reservados.</p>
 </footer>
+
+<script src="lang.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    setLanguage("es"); // Idioma por defecto
+  });
+</script>
+
+<script>
+let currentLang = "es";
+function toggleLanguage() {
+  currentLang = currentLang === "es" ? "en" : "es";
+  setLanguage(currentLang);
+  document.querySelector(".nav-idiom").textContent = translations[currentLang].idioma;
+}
+</script>
 
 
 <script>

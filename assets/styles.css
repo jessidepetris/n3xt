@@ -75,11 +75,6 @@
     display: flex;
   }
 
-  .idioma{
-    margin-right:10px;
-    width:30px;
-    height: 30px;
-    }
 
 
     .menuToggle {
@@ -108,40 +103,75 @@
     text-decoration: none;
     font-weight: bold;
   }
+
+  .nav-idiom {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .arregloheader{
+    display: flex;
+  }
+
   
   .principal{
     background: url('../img/principal.jpg') center/cover no-repeat;
     color: #fff;
     text-align: center;
     padding: 6rem 2rem;
-    height:100vh;
+    min-height:100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
   }
-  
-  .principal h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+
+    .h2soft {
+    line-height: 1.2;
+    font-size: 3rem;
+    font-weight: 200;
     width:70vw;
+    text-align:center;
+  }
+
+  .h2Principal {
+    line-height: 1.2;
+    font-size: 3rem;
+    font-weight: 900;
+    width:60vw;
     text-align:center;
   }
   
   .pPrincipal {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.2rem;
+    padding-left: 1rem;
+    padding-right:1rem;
     margin-bottom: 2rem;
+    margin-top:2.5rem;
+    background-color:#3195FB;
   }
   
   .botonPrincipal {
-    margin-top:5rem;
-    background-color: #3195FB;
+    margin-top:1rem;
+    background-color:#002b5b;
     color: #fff;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     border-radius: 15px;
     font-weight: bold;
-    font-size:1.3rem;
+    font-size:1.5rem;
   }
 
   .botonPrincipal:hover {
@@ -231,7 +261,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 60vh;
+    min-height: 80vh;
   }
 
   .empresasTitulo{
@@ -239,14 +269,13 @@
     font-size: 2rem;
     font-weight: 800;
     margin-top:1.5rem;
-    margin-bottom:0.2rem;
     text-align: center;
   }
 
   .empresasSubtitulo{
     color: #3195FB;
-    font-size: 1rem;
-    margin-bottom:1rem;
+    font-size: 1.3rem;
+    margin-bottom:2rem;
     text-align: center;
   }
 
@@ -274,7 +303,9 @@
 }
 
   .nosotros{
-    background-color:#ffffff;
+    background-image:url("/img/fondobusiness.jpg");
+    background-size: cover;
+    background-attachment: fixed, scroll;
     min-height:100vh;
     display:flex;
     flex-direction: column;
@@ -283,18 +314,20 @@
   }
 
   .nosotrosTitulo{
-    color: #3195FB;
+    color: #ffffff;
     font-size: 2rem;
-    font-weight: 800;
-    margin-top:2rem;
+    font-weight: 900;
+    margin-top:5rem;
     margin-bottom:1rem;
     text-align: center;
   }
 
   .nosotrosDiv{
     display: flex;
+    flex-direction: row;
     margin-left:10vw;
     margin-right:10vw;
+    margin-bottom:4rem;
     margin-top:10vh;
   }
 
@@ -303,6 +336,8 @@
     line-height:2.5;
     padding-right:2rem;
     text-align: justify;
+    color:white;
+
 }
 
   .imgNosotros{
@@ -423,12 +458,21 @@
     .menuToggle {
       display: block;
     }
+
+    .h2soft{
+      font-size:2rem;
+      width: 90vw;
+    }
+
+    .h2Principal{
+      font-size:2rem;
+      width: 90vw;
+    }
   
     .navNext {
       display: none;
       flex-direction: column;
       width:100vw;
-      min-height:70vh;
       position: absolute;
       top: 60px;
       left:0px;
@@ -450,6 +494,7 @@
         margin-bottom:0.5em;
         margin-right:0;
     }
+    
     .botonPrincipal {
         margin-top:2rem;
     }
@@ -471,7 +516,7 @@
     }
 
     .sectionEmpresas{
-        min-height: 60vh;
+        min-height: 80vh;
     }
 
     .datosDiv{
